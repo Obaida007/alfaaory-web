@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@import "@fontsource-variable/readex-pro";
+
+@theme {
+  --font-sans: "Readex Pro Variable", ui-sans-serif, system-ui, sans-serif;
+
+  --color-bg: #0c0a14;
+  --color-surface: #13111c;
+  --color-surface-2: #1a1726;
+  --color-tile: #231d38;
+  --color-tile-ink: #5b4d96;
+  --color-line: rgb(255 255 255 / 0.08);
+  --color-ink: #f4f3f8;
+  --color-muted: #a19db3;
+  --color-faint: #6f6a82;
+
+  --color-brand: #7c3aed;
+  --color-brand-600: #6d28d9;
+  --color-brand-300: #b49cff;
+  --color-mint: #6ee7b7;
+  --color-mint-ink: #0f3b2c;
+  --color-success-bg: #133524;
+  --color-warn: #f6c56b;
+  --color-warn-bg: #3a2c12;
+  --color-danger: #f08a8a;
+  --color-danger-bg: #3b1a1d;
+
+  --radius-card: 1rem;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Numbers and Latin product names stay left-to-right inside RTL text. */
+.ltr {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1) opacity(0.7);
+}
+
+/* LTR inputs (IDs, emails, codes) keep their Arabic placeholder right-to-left. */
+input.ltr:placeholder-shown {
+  direction: rtl;
+}
